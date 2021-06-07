@@ -1,0 +1,131 @@
+/* Inputs.js */
+.inputs {
+    line-height: 50px;
+    color: black;
+    font-size: large;
+    margin-left: 200px;
+    margin-top: 10px;
+    padding: 10px 10px 50px 10px;
+    border: 3px solid #f00;
+    background-color: lightgray;
+    height: 475px;
+}
+
+.Submit {
+    float: right;
+    font-size: 16px;
+}
+
+/* InputInfo.js */
+.InputInfoBox {
+    overflow: auto;
+    border: 3px solid #F00;
+    display: inline-block;
+    margin-left: 200px;
+    margin-top: 10px;
+    padding: 10px 10px 50px 10px;
+    color:black;
+    background-color: lightgray;
+    max-width: 500px;
+    text-align: center;
+    max-height: 475px;
+    font-size:large;
+}
+
+p{
+    display: inline-block;
+    margin-left: 10px;
+}
+
+li {
+    padding: 2px;
+    margin-top: 10px;
+}
+
+.InfoList {
+    list-style: none;
+    text-align: left;
+}
+
+.Header {
+    text-align: center;
+}
+
+.ChestPainList {
+    display: inline-table;
+    list-style: none;
+}
+
+.EcgList {
+    display: inline-table;
+    list-style: none;
+}
+
+/* Main.js */
+
+body {
+  background-color: grey;
+  padding: 10px;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+ul.header li {
+  display: inline;
+  list-style-type: none;
+  margin: 0;
+}
+
+ul.header {
+  background-color: #111;
+  margin: 5px 250px 0px 250px;
+  font-size: large;
+  border: 3px solid #F00;
+  text-align: center;
+}
+
+ul.header li a {
+  color: whitesmoke;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 15px;
+  display: inline-block;
+}
+
+.HeartLogo{
+  max-width: 40px;
+  display: inline;
+  margin-right: 20px;
+  margin-top: 0px;
+}
+
+.MainPageHeader{
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  color:whitesmoke;
+  margin-top: 0px;
+  
+}
+
+.MainH1 {
+  display: inline;
+}
+
+.active {
+  background-color: red;
+}
+
+.results {
+  pointer-events: none;
+}
+
+/* Home.js */
+   
+.Inputs {
+    float: left;
+}
+  
+.InputInfo {
+    float: left;
+}
