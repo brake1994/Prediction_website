@@ -32,7 +32,7 @@ class Inputs extends Component {
   handleSubmit(event){
     event.preventDefault();
 
-    fetch("http://127.0.0.1:8000/api/create-prediction",{
+    fetch("https://heart-health-predict.herokuapp.com/api/create-prediction",{
       method: "POST",
       headers: {"Content-Type": "application/json"},
       body: JSON.stringify({
