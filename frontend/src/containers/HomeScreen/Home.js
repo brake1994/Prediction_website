@@ -2,7 +2,7 @@ import Inputs from "../../components/Inputs/Inputs";
 import InputInfo from "../../components/InputInfo/InputInfo";
 import React, { Component } from "react";
 
-class Home extends Component {
+export default class Home extends Component {
 
   render() {
     return (
@@ -12,7 +12,7 @@ class Home extends Component {
             <div className="InputInfo">
               <InputInfo />
             </div>
-            <div className="Inputs">
+            <div className="HomeInputs">
               <Inputs />
             </div>
           </div>
@@ -21,5 +21,3 @@ class Home extends Component {
     );
   }
 }
-
-export default Home;

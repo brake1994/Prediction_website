@@ -1,7 +1,7 @@
 import React, {Component} from "react";
-import Axios from 'axios';
+import {withRouter} from 'react-router-dom';
 
-export default class Inputs extends Component {
+class Inputs extends Component {
 
   constructor(props){
     super(props);
@@ -31,9 +31,9 @@ export default class Inputs extends Component {
 
   handleSubmit(event){
     event.preventDefault();
-    
-    const request = {
-      method:"POST",
+
+    fetch("http://127.0.0.1:8000/api/create-prediction",{
+      method: "POST",
       headers: {"Content-Type": "application/json"},
       body: JSON.stringify({
         age: this.state.age,
@@ -47,16 +47,18 @@ export default class Inputs extends Component {
         exerciseAngina: this.state.exerciseAngina,
         exerciseStDep: this.state.exerciseStDep
       })
-    };
-    fetch("api/create-prediction", request)
-      .then((response) => response.json())
-      .then((data) => console.log(data));
+    }).then((resp) => resp.json())
+      .then((resp) => this.props.history.push({
+        pathname: '/results',
+        results: resp.result,
+        accuracy: resp.accuracy
+      }));
   }
 
   render(){
   return (
     <form id='submitForm' onSubmit={this.handleSubmit}>
-        <div className="inputs">
+        <div className="Inputs">
             <div>
               <label>Age: </label>
               <input type="number" name="age" onChange={this.handleChange} />
@@ -122,12 +124,18 @@ export default class Inputs extends Component {
 
             <div>
               <label>Exercise-induced ST depression:  </label>
+              <input type= "number" name="exerciseStDep" onChange={this.handleChange} />
               
             </div>
 
-             <button className="Submit" form="submitForm" type="submit">Submit</button>         
+            <div>
+              <button className="Submit" form="submitForm" type="submit">Submit</button>         
+            </div>
+
         </div>
       </form>
       );
   }
 }
+
+export default withRouter(Inputs);
