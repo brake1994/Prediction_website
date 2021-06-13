@@ -1,0 +1,282 @@
+/*
+DESKTOP
+~~~~~~~~~~~~~~~~
+*/
+
+/* Inputs.js */
+.Inputs {
+    line-height: 50px;
+    color: black;
+    font-size: large;
+    margin-left: 25%;
+    margin-top: 2.5%;
+    padding: 2.5% 2.5% 8.5% 2.5%;
+    border: 3px solid #f00;
+    background-color: lightgray;
+    width: 100%;
+    box-sizing: content-box;
+}
+
+.Submit {
+    float: right;
+    font-size: 16px;
+    
+}
+
+/* InputInfo.js */
+.InputInfoBox {
+    overflow: auto;
+    border: 3px solid #F00;
+    display: inline-block;
+    margin-left: 25%;
+    margin-top: 2.5%;
+    padding: 2.5% 2.5% 8.5% 2.5%;
+    color:black;
+    background-color: lightgray;
+    width: 70%;
+    text-align: center;
+    height: 30vw;
+    font-size:large;
+    box-sizing: border-box;
+    box-shadow: 10px 10px 10px black;
+}
+
+p{
+    display: inline-block;
+    margin-left: 2.5%;
+}
+
+li {
+    margin-top: 2.5%;
+}
+
+.InfoList {
+    list-style: none;
+    text-align: left;
+}
+
+.Header {
+    text-align: center;
+}
+
+.ChestPainList {
+    display: inline-table;
+    list-style: none;
+}
+
+.EcgList {
+    display: inline-table;
+    list-style: none;
+}
+
+/* Main.js */
+
+body {
+  background-color: #3d3e42;
+  font-family: sans-serif;
+}
+
+ul.header li {
+  display: inline;
+  list-style-type: none;
+  margin: 0;
+}
+
+ul.header {
+  margin: 10px 525px 0px 525px;
+  font-size: large;
+  border: 3px solid #F00;
+  text-align: center;
+  background-color: black;
+}
+
+ul.header li a {
+  color: whitesmoke;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 3.5%;
+  display: inline-block;
+}
+
+.HeartLogo{
+  max-width: 40px;
+  display: inline;
+  margin-right: 20px;
+  margin-top: 0px;
+}
+
+.MainPageHeader{
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  color:whitesmoke;
+  margin-top: 0px;
+  
+}
+
+.MainH1 {
+  display: inline;
+}
+
+.active {
+  background-color: red;
+}
+
+/*.results {
+  pointer-events: none;
+}*/
+
+/* Home.js */
+   
+.HomeInputs {
+    float: left;
+}
+  
+.InputInfo {
+    float: left;
+}
+
+/* Results */
+
+/* result of one */
+
+.r1BoxOne, .r1BoxTwo {
+  line-height: 35px;
+  color: black;
+  font-size: 25px;
+  margin-left: 6%;
+  margin-top: 2.5%;
+  padding-top: 5px;
+  border: 3px solid #f00;
+  background-color: lightgray;
+  height: 475px;
+  float: left;
+  width: 40%;
+  box-sizing: border-box;
+}
+
+.firstLines {
+  margin-left: 40%;
+
+}
+
+.AboutResults {
+  font-size: 18px;
+
+}
+
+
+/* Lifestyle box */
+
+.LifestyleBox {
+  text-align: center;
+  font-size: 25px;
+}
+
+.IconInfo {
+  font-size: 16px;
+}
+
+
+/*
+MOBILE
+~~~~~~~~~~~~~~~
+*/
+
+@media (max-width: 480px) {
+
+  * {
+    padding: 0px auto;
+    margin: 0px auto;
+  }
+
+  ul.header, .Inputs, .InputInfoBox {
+    width: 100%;
+    box-shadow: none;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 13px;
+    margin-left: 10px;
+  }
+}
+
+@media (max-width: 768px) and (min-width: 481px){
+  * {
+    margin: 0px auto;
+    padding: 0px auto;
+  }
+
+  ul.header {
+    width: 90%;
+    box-shadow: none;
+    margin: 10px 10px 10px 10px;
+    font-size: 20px;
+  }
+
+  .Inputs {
+    font-size: 22px;
+    box-sizing: content-box;
+    width: 70%;
+    margin: auto;
+  }
+
+  .InputInfoBox{
+    font-size: 22px;
+    box-sizing: border-box;
+    width: 75%;
+    margin: 10px 100px 10px;
+    box-shadow: none;
+  }
+
+  .InputInfo, .HomeInputs {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1224px) and (orientation: portrait) {
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  ul.header {
+    width: 100%;
+    box-shadow: none;
+    margin: auto;
+    margin-top: 20px;
+    font-size: 24px;
+  }
+
+  .MainPageHeader{
+    font-size: 28px;
+  }
+
+  .Inputs {
+    font-size: 24px;
+    box-sizing: content-box;
+    padding: auto;
+    width: 70%;
+    margin: auto;
+  }
+
+  .InputInfoBox{
+    font-size: 24px;
+    box-sizing: border-box;
+    width: 75%;
+    margin: 40px 125px 40px;
+    box-shadow: none;
+  }
+
+  .InputInfo, .HomeInputs {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  .Submit {
+    font-size: 24px;
+  }
+}
