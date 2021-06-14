@@ -1,5 +1,4 @@
 from django.urls import path
-from rest_framework.generics import DestroyAPIView
 from .views import PredictionView, CreatePredictionView
 
 urlpatterns = [

@@ -34,7 +34,7 @@ class Inputs extends Component {
 
     fetch("https://heart-health-predict.herokuapp.com/api/create-prediction",{
       method: "POST",
-      headers: {"Content-Type": "application/json"},
+      headers: {"Content-Type": "application/json","Accept": "application/json"},
       body: JSON.stringify({
         age: this.state.age,
         sex: this.state.sex,
