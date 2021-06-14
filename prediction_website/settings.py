@@ -26,7 +26,10 @@ SECRET_KEY = 'django-insecure-wk*4xmitn3on1fb6#jg8qd40rv&2+fj4g=880t$#pg5&gl#01!
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['heart-health-predict.herokuapp.com']
+ALLOWED_HOSTS = [
+    'heart-health-predict.herokuapp.com',
+
+    ]
 
 
 # Application definition
