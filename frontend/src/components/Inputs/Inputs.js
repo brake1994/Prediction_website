@@ -129,7 +129,7 @@ class Inputs extends Component {
             </div>
 
             <div>
-              <button className="Submit" form="submitForm" type="button" onMouseDown={this.handleSubmit}>Submit</button>         
+              <button className="Submit" form="submitForm" type="button" onClick={this.handleSubmit} onTouchStart={this.handleSubmit}>Submit</button>         
             </div>
 
         </div>
