@@ -32,9 +32,9 @@ class Inputs extends Component {
   handleSubmit(event){
     event.preventDefault();
 
-    fetch("https://heart-health-predict.herokuapp.com/api/create-prediction",{
+    fetch("http://heart-health-predict.herokuapp.com/api/create-prediction",{
       method: "POST",
-      headers: {"Content-Type": "application/json","Accept": "application/json"},
+      headers: {"Content-Type": "application/json", "Accept": "application/json"},
       body: JSON.stringify({
         age: this.state.age,
         sex: this.state.sex,
@@ -56,8 +56,8 @@ class Inputs extends Component {
   }
 
   render(){
-  return (
-    <form id='submitForm' onSubmit={this.handleSubmit}>
+    return (
+      <form id='submitForm' onSubmit={this.handleSubmit}>
         <div className="Inputs">
             <div>
               <label>Age: </label>

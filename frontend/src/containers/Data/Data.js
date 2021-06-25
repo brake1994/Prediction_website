@@ -1,16 +1,18 @@
 import React, {Component} from "react";
+import HeatMapGraph from "../../components/HeatMapGraph/HeatMapGraph";
 
-class Data extends Component {
+export default class Data extends Component {
+    constructor(props){
+        super(props);
+    }
 
     render(){
         return (
             <div>
-                to be built
+                <HeatMapGraph />
             </div>
 
         );
     }
 
 }
-
-export default Data;

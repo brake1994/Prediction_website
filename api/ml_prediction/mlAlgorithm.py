@@ -33,3 +33,7 @@ def predict(inputs):
 def accuracy():
     prediction = logisticRegression.predict(x_test)
     return round(accuracy_score(y_test, prediction), 4)
+
+def getData():
+    
+    return data.corr()

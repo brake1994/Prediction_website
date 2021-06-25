@@ -1,12 +1,11 @@
-from re import S
-import re
 from django.shortcuts import render
 from rest_framework import generics, status
 from rest_framework.views import APIView
 from rest_framework.response import Response
-from .serializers import CreatePredictionSerializer, PredictionSerializer
-from .models import Prediction
-from .ml_prediction.mlAlgorithm import predict, accuracy
+from .serializers import CreatePredictionSerializer, PredictionSerializer, DataSerializer
+from .models import Data, Prediction
+from .ml_prediction.mlAlgorithm import predict, accuracy, getData
+
 
 
 # Create your views here.
@@ -46,4 +45,12 @@ class CreatePredictionView(generics.CreateAPIView):
 
             return Response(response, status= status.HTTP_200_OK)
 
-            
+class HeatMapView(generics.RetrieveAPIView):
+    queryset= Data.objects.all()
+    serializer_class= DataSerializer
+
+    def get(self, request, format=None):
+        retrievedData = getData()
+
+        response = {'data': retrievedData}
+        return Response(response, status=status.HTTP_200_OK)
