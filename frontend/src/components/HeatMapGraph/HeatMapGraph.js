@@ -20,9 +20,6 @@ export default class HeatMapGraph extends Component {
             return {zValues: dataRetrieved.data};
         });
 
-        console.log(dataRetrieved);
-        console.log(this.state.zValues);
-        console.log(this.state.zValues.age);
     }
 
     render() {

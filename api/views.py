@@ -1,10 +1,11 @@
+from os import stat
 from django.shortcuts import render
 from rest_framework import generics, status
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from .serializers import CreatePredictionSerializer, PredictionSerializer, DataSerializer
 from .models import Data, Prediction
-from .ml_prediction.mlAlgorithm import predict, accuracy, getData
+from .ml_prediction.mlAlgorithm import *
 
 
 
@@ -50,7 +51,43 @@ class HeatMapView(generics.RetrieveAPIView):
     serializer_class= DataSerializer
 
     def get(self, request, format=None):
-        retrievedData = getData()
+        retrievedData = getHeatmapData()
 
         response = {'data': retrievedData}
         return Response(response, status=status.HTTP_200_OK)
+
+class ScatterPlotView(generics.RetrieveAPIView):
+    queryset = Data.objects.all()
+    serializer_class = DataSerializer
+
+    def get(self, request, format=None):
+        retrievedData = getScatterPlotData()
+
+        response = {'age': retrievedData[0], 'restbp': retrievedData[1]}
+        return Response(response, status=status.HTTP_200_OK)
+
+class DatasetView(generics.RetrieveAPIView):
+    queryset = Data.objects.all()
+    serializer_class = DataSerializer
+
+    def get(self, request, format=None):
+        retrievedData = getDataset()
+
+        response = {'age': retrievedData['age'], 'sex': retrievedData['sex'], 'cp': retrievedData['cp'],
+            'trestbps': retrievedData['trestbps'], 'chol': retrievedData['chol'], 'fbs': retrievedData['fbs'],
+            'restecg': retrievedData['restecg'], 'thalach': retrievedData['thalach'],
+            'exang': retrievedData['exang'], 'oldpeak': retrievedData['oldpeak'], 'num': retrievedData['num']}
+        
+        return Response(response, status= status.HTTP_200_OK)
+
+class AverageTableView(generics.RetrieveAPIView):
+    queryset = Data.objects.all()
+    serializer_class = DataSerializer
+
+    def get(self, request, format=None):
+        lowRisk = getLowRiskAverages()
+        highRisk = getHighRiskAverages()
+
+        response = {'lowRisk': lowRisk, 'highRisk': highRisk}
+        return Response(response, status=status.HTTP_200_OK)
+        

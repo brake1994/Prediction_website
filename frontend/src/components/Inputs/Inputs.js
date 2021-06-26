@@ -29,10 +29,9 @@ class Inputs extends Component {
     });
   }
 
-  handleSubmit(event){
-    event.preventDefault();
+  handleSubmit(){
 
-    fetch("http://heart-health-predict.herokuapp.com/api/create-prediction",{
+    fetch("api/create-prediction",{
       method: "POST",
       headers: {"Content-Type": "application/json", "Accept": "application/json"},
       body: JSON.stringify({

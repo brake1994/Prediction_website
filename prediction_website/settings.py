@@ -81,7 +81,8 @@ WSGI_APPLICATION = 'prediction_website.wsgi.application'
 
 CORS_ALLOWED_ORIGINS: [
     "https://heart-health-predict.herokuapp.com",
-    "http://heart-health-predict.herokuapp.com"
+    "http://heart-health-predict.herokuapp.com",
+    "127.0.0.1"
 ]
 
 # Database
