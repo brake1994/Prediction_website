@@ -193,10 +193,20 @@ MOBILE
 
 @media (max-width: 480px) {
 
-  ul.header {
-    width: 90%;
+  ul.header{
+    width: 100%;
   }
   
+  .Inputs, .InputInfoBox {
+    width: 100%;
+    font-size: 10px;
+    box-shadow: none;
+    margin-left: 0;
+  }
+
+  .WrapperDiv {
+    width: 100%;
+  }
 }
 
 @media (max-width: 768px) and (min-width: 481px){
