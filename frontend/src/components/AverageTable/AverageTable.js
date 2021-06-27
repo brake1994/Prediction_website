@@ -46,16 +46,32 @@ export default class AverageTable extends Component {
                             type: 'table',
                             header: {
                                 values: ["Attributes", "Low Risk", "High Risk"],
-                                align: "center",
-                                fill: {color: "black"},
-                                font: {size:12, family:"Arial", color:"white"}
+                                align: "center", 
+                                height: 40,
+                                fill: {color: "#000"}
                             },
                             cells: {
                                 values: [['Age', 'Blood Pressure', 'Cholesterol', 'Max Heart Rate'], 
-                                this.createColumns()[0], this.createColumns()[1]]
+                                this.createColumns()[0], this.createColumns()[1]],
+                                align: "center",
+                                height: 40,
+                                fill: {color: "#000"}
                             }
                         }
                     ]}
+
+                    layout = {{
+                        title: {
+                            text: "COMPARISON OF AVERAGE VALUES",
+                            size: 20
+                        },
+                        paper_bgcolor: "#000",
+                        font: {
+                            color: "#fff",
+                            size: 16
+                        },
+                        
+                    }}
                 
                 />
             </div>

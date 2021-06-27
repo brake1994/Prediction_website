@@ -12,10 +12,20 @@ export default class Data extends Component {
     render(){
         return (
             <div>
-                <HeatMapGraph />
-                <ScatterPlot />
-                <AverageTable />
-                <DatasetTable />
+                <div className= "HeatMapDiv">
+                    <HeatMapGraph />
+                </div>
+                <div className="ScatterPlot">
+                    <ScatterPlot />
+                </div>
+                <div className="AverageTable">
+                    <AverageTable />
+                </div>
+                <div className="DatasetTable">
+                    <DatasetTable />
+                    <a href="https://www.kaggle.com/imnikhilanand/heart-attack-prediction" 
+                    target= "_blank" alt="Dataset Link" className="DatasetLink">DATASET SOURCE</a>
+                </div>
             </div>
 
         );

@@ -33,7 +33,32 @@ export default class ScatterPlot extends Component {
                             type: 'scatter'
                         }
                     ]}
-                    layout = {{width:400, height:400}}
+                    layout = {{
+                        title: {
+                            text: "AGE AND BLOOD PRESSURE OF HIGH RISK INDIVIDUALS"
+                        },
+                        xaxis: {
+                            title: {
+                                text: "Age",
+                                size: 20
+                            }
+                        },
+                        yaxis: {
+                            title: {
+                                text: "Blood Pressure"
+                            }
+                        },
+                        responsive: true,
+                        autosize: true,
+                        paper_bgcolor: "#000",
+                        plot_bgcolor: "#D3D3D3",
+                        font: {
+                            color: "fff",
+                        },
+                        markers: {
+                            color: "#fff"
+                        }
+                    }}
                 />
             </div>
         );

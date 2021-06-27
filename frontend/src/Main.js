@@ -9,7 +9,7 @@ export default class Main extends Component {
   render() {
     return (
       <HashRouter>
-        <div>
+        <div className="Main">
           <header className="MainPageHeader">
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Heart_coraz%C3%B3n.svg/1200px-Heart_coraz%C3%B3n.svg.png"
               alt="Heart logo" className="HeartLogo" />

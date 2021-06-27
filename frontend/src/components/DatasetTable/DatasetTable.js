@@ -61,16 +61,30 @@ export default class DatasetTable extends Component {
                            header: {
                                values: this.createLabels(),
                                align: "center",
+                               height: 25,
                                fill: {color: "black"},
-                               font: {size:12, family:"Arial", color:"white"}
+                               font: {size:12, color:"white"}
                            },
                            cells: {
                                 values: this.createColumns(),
                                 align: "center",
-                                fill: {color: "lightgray"}
+                                height: 25,
+                                fill: {color: "black"},
+                                font: {size: 11}
                            }
                         }
                     ]}
+                    layout = {{
+                        title: {
+                            text: "COMPLETE DATASET",
+                            size: 20,
+                            color: "#fff"
+                        },
+                        paper_bgcolor: "#000",
+                        font: {
+                            color: "#fff"
+                        }
+                    }}
                 />
             </div>
         );

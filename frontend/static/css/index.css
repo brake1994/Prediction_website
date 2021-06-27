@@ -8,13 +8,13 @@ DESKTOP
     line-height: 50px;
     color: black;
     font-size: large;
-    margin-left: 25%;
-    margin-top: 2.5%;
-    padding: 2.5% 2.5% 8.5% 2.5%;
+    margin: 15px auto 0px auto; 
+    padding: 10px;
     border: 3px solid #f00;
     background-color: lightgray;
-    width: 100%;
-    box-sizing: content-box;
+    box-sizing: border-box;
+    float: left;
+    width: 35%;
 }
 
 .Submit {
@@ -27,18 +27,17 @@ DESKTOP
 .InputInfoBox {
     overflow: auto;
     border: 3px solid #F00;
-    display: inline-block;
-    margin-left: 25%;
-    margin-top: 2.5%;
-    padding: 2.5% 2.5% 8.5% 2.5%;
+    margin: 15px 15% 0px auto; 
+    padding: 2.5% 0% 0% 2.5%;
     color:black;
     background-color: lightgray;
-    width: 70%;
     text-align: center;
     height: 30vw;
     font-size:large;
     box-sizing: border-box;
     box-shadow: 10px 10px 10px black;
+    float: left;
+    width: 40%;
 }
 
 p{
@@ -59,17 +58,22 @@ li {
     text-align: center;
 }
 
-.ChestPainList {
+.ChestPainList, .EcgList {
     display: inline-table;
     list-style: none;
 }
 
-.EcgList {
-    display: inline-table;
-    list-style: none;
+.WrapperDiv {
+  width: 90%;
+  margin: auto;
+  justify-content: space-around;
+  padding-left: 50px;
 }
-
 /* Main.js */
+
+.Main {
+  width: 100%;
+}
 
 body {
   background-color: #3d3e42;
@@ -79,15 +83,15 @@ body {
 ul.header li {
   display: inline;
   list-style-type: none;
-  margin: 0;
 }
 
 ul.header {
-  margin: 10px 525px 0px 525px;
-  font-size: large;
+  padding: 0;
+  margin: 10px auto 0px auto;
   border: 3px solid #F00;
   text-align: center;
   background-color: black;
+  width:  35%;
 }
 
 ul.header li a {
@@ -122,18 +126,8 @@ ul.header li a {
   background-color: red;
 }
 
-/*.results {
+.results {
   pointer-events: none;
-}*/
-
-/* Home.js */
-   
-.HomeInputs {
-    float: left;
-}
-  
-.InputInfo {
-    float: left;
 }
 
 /* Results */
@@ -177,6 +171,20 @@ ul.header li a {
   font-size: 16px;
 }
 
+/* Data */
+
+.HeatMapDiv, .ScatterPlot, .AverageTable, .DatasetTable {
+  background-color: black;
+  width: min-content;
+  margin: 5% auto 5% auto;
+  text-align: center;
+  border: 3px solid #F00;
+}
+
+.DatasetLink {
+  color: white;
+}
+
 
 /*
 MOBILE
@@ -185,19 +193,10 @@ MOBILE
 
 @media (max-width: 480px) {
 
-  * {
-    padding: 0px auto;
-    margin: 0px auto;
+  ul.header {
+    width: 90%;
   }
-
-  ul.header, .Inputs, .InputInfoBox {
-    width: 100%;
-    box-shadow: none;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    font-size: 13px;
-    margin-left: 10px;
-  }
+  
 }
 
 @media (max-width: 768px) and (min-width: 481px){
@@ -206,33 +205,7 @@ MOBILE
     padding: 0px auto;
   }
 
-  ul.header {
-    width: 90%;
-    box-shadow: none;
-    margin: 10px 10px 10px 10px;
-    font-size: 20px;
-  }
-
-  .Inputs {
-    font-size: 22px;
-    box-sizing: content-box;
-    width: 70%;
-    margin: auto;
-  }
-
-  .InputInfoBox{
-    font-size: 22px;
-    box-sizing: border-box;
-    width: 75%;
-    margin: 10px 100px 10px;
-    box-shadow: none;
-  }
-
-  .InputInfo, .HomeInputs {
-    width: 100%;
-    padding: 0;
-    margin: 0;
-  }
+  
 
 }
 
@@ -242,41 +215,5 @@ MOBILE
     padding: 0;
   }
 
-  ul.header {
-    width: 100%;
-    box-shadow: none;
-    margin: auto;
-    margin-top: 20px;
-    font-size: 24px;
-  }
-
-  .MainPageHeader{
-    font-size: 28px;
-  }
-
-  .Inputs {
-    font-size: 24px;
-    box-sizing: content-box;
-    padding: auto;
-    width: 70%;
-    margin: auto;
-  }
-
-  .InputInfoBox{
-    font-size: 24px;
-    box-sizing: border-box;
-    width: 75%;
-    margin: 40px 125px 40px;
-    box-shadow: none;
-  }
-
-  .InputInfo, .HomeInputs {
-    width: 100%;
-    padding: 0;
-    margin: 0;
-  }
-
-  .Submit {
-    font-size: 24px;
-  }
+  
 }
