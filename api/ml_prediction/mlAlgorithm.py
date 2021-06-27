@@ -34,6 +34,32 @@ def accuracy():
     prediction = logisticRegression.predict(x_test)
     return round(accuracy_score(y_test, prediction), 4)
 
-def getData():
+def getHeatmapData():
     
     return data.corr()
+
+def getScatterPlotData():
+
+    sortedDataAge = data['age'].loc[data['num'] == 1]
+    sortedDataTrestbps = data['trestbps'].loc[data['num'] == 1]
+
+    return sortedDataAge, sortedDataTrestbps
+
+def getHighRiskAverages():
+    avgAge = round(data['age'].loc[data['num'] == 1].mean(), 2)
+    avgTrestbps = round(data['trestbps'].loc[data['num'] == 1].mean(), 2)
+    avgChol = round(data['chol'].loc[data['num'] == 1].mean(), 2)
+    avgThalach = round(data['thalach'].loc[data['num'] == 1].mean(), 2)
+
+    return avgAge, avgTrestbps, avgChol, avgThalach
+
+def getLowRiskAverages():
+    avgAge = round(data['age'].loc[data['num'] == 0].mean(), 2)
+    avgTrestbps = round(data['trestbps'].loc[data['num'] == 0].mean(), 2)
+    avgChol = round(data['chol'].loc[data['num'] == 0].mean(), 2)
+    avgThalach = round(data['thalach'].loc[data['num'] == 0].mean(), 2)
+
+    return avgAge, avgTrestbps, avgChol, avgThalach
+
+def getDataset():
+    return data

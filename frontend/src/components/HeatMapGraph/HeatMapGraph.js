@@ -1,3 +1,4 @@
+import { FontDownload } from "@material-ui/icons";
 import React, {Component} from "react";
 import Plot from 'react-plotly.js';
 
@@ -20,9 +21,6 @@ export default class HeatMapGraph extends Component {
             return {zValues: dataRetrieved.data};
         });
 
-        console.log(dataRetrieved);
-        console.log(this.state.zValues);
-        console.log(this.state.zValues.age);
     }
 
     render() {
@@ -45,11 +43,26 @@ export default class HeatMapGraph extends Component {
                         this.state.zValues.oldpeak,
                         this.state.zValues.num
                     ],
-                    type: 'heatmap' 
+                    type: 'heatmap',
+                }]}
+                layout= {{
+                    title: {
+                        text: "ATTRIBUTE CORRELATION HEATMAP",
+                        size: 20
+                    },
+                    responsive: true,
+                    autosize: true,
+                    paper_bgcolor: "#000",
+                    font: {
+                        color: "fff",
+                        size: 14
+                    },
+                    margin: {
+                        b: 100,
+                        l: 150,
+                    }
 
-                }
-            ]} 
-            layout= {{width: 900, height: 500}}
+                }}
             />
         ); 
     }
