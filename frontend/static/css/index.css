@@ -193,19 +193,25 @@ MOBILE
 
 @media (max-width: 480px) {
 
+  /* Home Screen*/
   ul.header{
     width: 100%;
   }
   
   .Inputs, .InputInfoBox {
     width: 100%;
-    font-size: 10px;
+    font-size: 12px;
     box-shadow: none;
     margin-left: 0;
   }
 
+  .InputInfoBox {
+    height: 40vw;
+  }
+
   .WrapperDiv {
     width: 100%;
+    padding-left: 0;
   }
 }
 
