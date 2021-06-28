@@ -61,7 +61,6 @@ export default class HeatMapGraph extends Component {
                         b: 100,
                         l: 150,
                     }
-
                 }}
             />
         ); 

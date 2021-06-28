@@ -11,8 +11,6 @@ export default class Main extends Component {
       <HashRouter>
         <div className="Main">
           <header className="MainPageHeader">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Heart_coraz%C3%B3n.svg/1200px-Heart_coraz%C3%B3n.svg.png"
-              alt="Heart logo" className="HeartLogo" />
             <h1 className="MainH1">Heart Disease Prediction</h1>
           </header>
           <ul className="header">

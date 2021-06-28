@@ -47,7 +47,7 @@ export default class LifestyleBox extends Component {
                         <Mood />
                     </IconButton>
                     <p>
-                        Mental Health/ Reduce Stress
+                        Mental Health
                     </p>
                 </div>
             </div>

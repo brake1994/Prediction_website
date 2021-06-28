@@ -41,9 +41,9 @@ export default class Results extends Component {
     render(){
 
         return (
-            <div className="resultOne">
-                <div className="r1BoxOne">
-                    <p className="firstLines">
+            <div className="ResultOne">
+                <div className="R1BoxOne">
+                    <p className="FirstLines">
                     <strong>Accuracy:</strong> {this.state.accuracy * 100}
                     <br/>
                     <strong>Results:</strong> {this.generateResult()}
@@ -55,7 +55,7 @@ export default class Results extends Component {
                     </p>
                 </div>
                 
-                <div className="r1BoxTwo">
+                <div className="R1BoxTwo">
                     <LifestyleBox />
                 </div>
                 
