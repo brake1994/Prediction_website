@@ -27,9 +27,9 @@ class InputInfo extends Component {
                         <li><em>Left venticular hypertrophy:</em> Enlarged heart</li>
                     </ol>
                 </li>
-                <li><strong>Maximum Heart Rate:</strong> Stress test maximum heart rate achieved</li>
+                <li><strong>Maximum Heart Rate:</strong> Stress test maximum heart rate achieved (Healthy range: 220 - age)</li>
                 <li><strong>Exercise-induced Angina:</strong> Chest pain during movement</li>
-                <li><strong>Exercise-induced ST Depression:</strong> Irregular ecg pattern during stress test</li>
+                <li><strong>Exercise-induced ST Depression:</strong> Irregular ecg pattern during stress test measured in mm (healthy range: 0)</li>
             </ul>
             
         </div>

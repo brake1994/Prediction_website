@@ -33,9 +33,12 @@ export default class Results extends Component {
     
     resultsMessage(){
         if(this.state.results === 1){
-            return ("Bad news!");
+            return ("Bad news! You are at increased risk of heart disease!" +
+                    " It isn't too late to improve your heart health though, check out the additional"+
+                     " resources to start making changes today.");
         }
-        return ("Good news!");
+        return ("Great News! You are at low risk of heart disease!" + 
+                " Check out the additional resources to find out how to keep you heart healthy.");
     }
 
     render(){
@@ -52,6 +55,11 @@ export default class Results extends Component {
                     <br /> 
                     <p className="AboutResults" >
                         {this.resultsMessage()}
+                        <br></br>
+                        <em>
+                        Disclaimer: This app is not meant to replace a professional testing. If you are experiencing
+                         chest pain see a physician immediately.
+                        </em>
                     </p>
                 </div>
                 
